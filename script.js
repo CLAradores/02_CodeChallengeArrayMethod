@@ -36,7 +36,7 @@ const people = [
     age: 23,
   },
 ];
-
+// Challenge 1////////////////////////////////////////////////////////////////////////
 const youngPeople = people.filter(
   (person) =>
     `${person.firstName} ${person.lastName} ${person.email}` && person.age <= 25
@@ -48,9 +48,7 @@ const numbers = [2, -30, 50, 20, -12, -9, 7];
 
 const positiveSum = numbers
   .filter((posNum) => posNum > 0)
-  .reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue;
-  }, 0);
+  .reduce((acc, curr) => acc + curr, 0);
 
 console.log(positiveSum);
 
@@ -62,3 +60,4 @@ words.forEach((word) => {
     word.toString().charAt(0).toUpperCase() + word.slice(1, word.length)
   );
 });
+//////////////////////////////////////////////////////////////////////////////////////
